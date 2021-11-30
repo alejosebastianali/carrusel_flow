@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Carousel - CSS Only</title>
+		<link rel="stylesheet" href="styles.css" />
+		<meta name="ad.size" content="width=950,height=300">
+		<script type="text/javascript">
+			var clickTag = "https://flow.com.ar/";
+		</script>
+
+
+	</head>
+	<body>
+		<section class="container">
+			<div class="carousel">
+				<!-- Cuando uno de estos inputs esta "checked" el carousel se va a desplazar 
+					lo que le indique el translateX en el CSS -->
+				<input
+					checked="checked"
+					class="carousel__activator"
+					id="carousel-slide-activator-1"
+					name="carousel"
+					type="radio"
+				/>
+
+				<input
+					class="carousel__activator"
+					id="carousel-slide-activator-2"
+					name="carousel"
+					type="radio"
+				/>
+
+				<input
+					class="carousel__activator"
+					id="carousel-slide-activator-3"
+					name="carousel"
+					type="radio"
+				/>
+
+				<!-- Los label setean el estado del input radio, lo cual provoca el movimiento.-->
+				<div class="carousel-controls">
+					<label
+						class="carousel-control carousel__control--forward"
+						for="carousel-slide-activator-2"
+					>
+					<img src="img/arrow_r.svg" alt="">
+					</label>
+				</div>
+
+				<div class="carousel-controls">
+					<label
+						class="carousel-control carousel__control--backward"
+						for="carousel-slide-activator-1"
+					>
+						<!-- Estoy situade en la "segunda pantalla" del carousel, por lo que "activator-1" 
+					me lleva a la pantalla anterior y "activator-3" a la siguiente -->
+					<img src="img/arrow_l.svg" alt="">
+				</label>
+					<label
+						class="carousel-control carousel__control--forward"
+						for="carousel-slide-activator-3"
+					>
+					<img src="img/arrow_r.svg" alt="">
+				</label>
+				</div>
+
+				<div class="carousel-controls">
+					<label
+						class="carousel-control carousel__control--backward"
+						for="carousel-slide-activator-2"
+					>
+						<img src="img/arrow_l.svg" alt="">
+					</label>
+				</div>
+				
+				<div class="carousel-screen">
+					<a href="javascript:void(window.open(clickTag))">				  
+						<div class="carousel-track">
+							<div class="carousel__item carousel__item--desktop-in-5">
+								<img src="img/flow_01.jpg" class="imagen" />
+							</div>
+
+							<div class="carousel__item carousel__item--desktop-in-5">
+								<img src="img/flow_02.jpg" class="imagen" />
+							</div>
+
+							<div class="carousel__item carousel__item--desktop-in-5">
+								<img src="img/flow_03.jpg" class="imagen" />
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
